@@ -1,0 +1,27 @@
+$per: 10;
+@for $i from 0 through 100 {
+  .u-w#{$i * $per} {
+    width: #{$i * $per}px !important;
+  }
+}
+
+$per: 1;
+@for $i from 0 through 100 {
+  .u-w#{$i * $per}p {
+    width: #{$i * $per}% !important;
+  }
+}
+
+$per: 10;
+@for $i from 0 through 100 {
+  .u-wmax#{$i * $per} {
+    max-width: #{$i * $per}px !important;
+  }
+}
+
+$per: 1;
+@for $i from 0 through 100 {
+  .u-wmax#{$i * $per}p {
+    max-width: #{$i * $per}% !important;
+  }
+}

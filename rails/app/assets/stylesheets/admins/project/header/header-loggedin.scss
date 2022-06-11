@@ -1,0 +1,24 @@
+.p-header-loggedin {
+  &__firstline {
+    height: 50px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  &__secondline {
+    height: 60px;
+    border-bottom: 1px solid #eee;
+    padding-left: 20px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+  }
+}

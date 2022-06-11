@@ -1,0 +1,20 @@
+<% provide(:title, "ユーザー一覧") %>
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>email</th>
+    <th width="220">操作</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td>
+        <%= link_to '詳細', admins_user_path(user), class: "btn btn-primary" %>
+        <%# link_to '編集', edit_admins_user_path(user), class: "btn btn-primary" %>
+        <%# link_to '削除', admins_user_path(user), method: :delete, class: "btn btn-danger", data: { confirm: "【確認】\nこちらはユーザーデータです。\nこのOKボタンを押した後、操作の取り消しはできません。\n削除してもよろしいですか？" } %>
+      </td>
+    </tr>
+  <% end %>
+</table>

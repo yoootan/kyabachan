@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render 'layouts/head' %>
+  </head>
+
+  <body>
+    <%= render "layouts/header" %>
+    <%= render 'layouts/flash' %>
+
+    <main class="">
+      <div class="position-relative">
+        <article>
+          <%= yield %>
+        </article>
+      </div>
+    </main>
+
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<%= form_with model: @user, url: users_signup_path, local: true do |f| %>
+  <%= render 'layouts/errors', model: @user %>
+  <div class="p-signup">
+    <div class="p-signup__inner">
+      <h2 class="p-signup__title"></h2>
+
+      <div class="p-signup__form-group">
+        <%= f.label :email, 'メールアドレス' %>
+        <div class="input-group mb-3">
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="p-signup__form-group">
+        <%= f.label :password, 'パスワード' %>
+        <div class="input-group mb-3">
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="p-signup__form-group">
+        <%= f.label :password_confirmation, 'パスワード(確認)' %>
+        <div class="input-group mb-3">
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="c-user_auth_card__btn">
+        <%= f.submit '会員登録する', class: 'c-btn c-btn--orange' %>
+      </div>
+
+      <hr class="mt-4 mb-4">
+
+      <div class="p-signup__btn"><a href="#" class="c-btn c-btn--secondary mb-1">Googleで登録</a></div>
+      <div class="p-signup__btn mt-2"><a href="#" class="c-btn c-btn--secondary">Facebookで登録</a></div>
+      <div class="p-signup__links mt-4">
+        <%= link_to 'ログインはこちら', users_login_path %>
+      </div>
+
+      <div class="p-signup__footer">
+        <small>サービス名</small>
+      </div>
+      
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+$per: 5;
+@for $i from 0 through 40 {
+  .u-p#{$i * $per} {
+    padding: #{$i * $per}px !important;
+  }
+  .u-pt#{$i * $per} {
+    padding-top: #{$i * $per}px !important;
+  }
+  .u-pr#{$i * $per} {
+    padding-right: #{$i * $per}px !important;
+  }
+  .u-pb#{$i * $per} {
+    padding-bottom: #{$i * $per}px !important;
+  }
+  .u-pl#{$i * $per} {
+    padding-left: #{$i * $per}px !important;
+  }
+}
+
+$per: 8;
+@for $i from 0 through 20 {
+  .u-p#{$i * $per} {
+    padding: #{$i * $per}px !important;
+  }
+  .u-pt#{$i * $per} {
+    padding-top: #{$i * $per}px !important;
+  }
+  .u-pr#{$i * $per} {
+    padding-right: #{$i * $per}px !important;
+  }
+  .u-pb#{$i * $per} {
+    padding-bottom: #{$i * $per}px !important;
+  }
+  .u-pl#{$i * $per} {
+    padding-left: #{$i * $per}px !important;
+  }
+}

@@ -1,0 +1,29 @@
+<nav class="p-sidenav">
+  <h1 class="p-sidenav__title">
+    <%= link_to admins_root_path do %>
+      管理画面
+    <% end %>
+  </h1>
+  <ul class="p-sidenav__links">
+    <li class="p-sidenav__links-item">
+      <%= link_to admins_root_path do %>
+        <i class="fa-fw fas fa-home mr-2"></i> トップ
+      <% end %>
+    </li>
+    <li class="p-sidenav__links-item">
+      <%= link_to admins_users_path do %>
+        <i class="fa-fw fas fa-users mr-2"></i> ユーザー一覧
+      <% end %>
+    </li>
+    <li class="p-sidenav__links-item">
+      <%= link_to admins_admins_path do %>
+        <i class="fa-fw fas fa-user-secret mr-2"></i> 管理者管理
+      <% end %>
+    </li>
+    <li class="p-sidenav__links-item">
+      <%= link_to admins_app_configs_path do %>
+        <i class="fa-fw fas fa-cogs mr-2"></i> アプリケーション設定
+      <% end %>
+    </li>
+  </ul>
+</nav>

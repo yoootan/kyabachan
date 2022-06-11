@@ -1,0 +1,37 @@
+$per: 5;
+@for $i from 0 through 40 {
+  .u-m#{$i * $per} {
+    margin: #{$i * $per}px !important;
+  }
+  .u-mt#{$i * $per} {
+    margin-top: #{$i * $per}px !important;
+  }
+  .u-mr#{$i * $per} {
+    margin-right: #{$i * $per}px !important;
+  }
+  .u-mb#{$i * $per} {
+    margin-bottom: #{$i * $per}px !important;
+  }
+  .u-ml#{$i * $per} {
+    margin-left: #{$i * $per}px !important;
+  }
+}
+
+$per: 8;
+@for $i from 0 through 20 {
+  .u-m#{$i * $per} {
+    margin: #{$i * $per}px !important;
+  }
+  .u-mt#{$i * $per} {
+    margin-top: #{$i * $per}px !important;
+  }
+  .u-mr#{$i * $per} {
+    margin-right: #{$i * $per}px !important;
+  }
+  .u-mb#{$i * $per} {
+    margin-bottom: #{$i * $per}px !important;
+  }
+  .u-ml#{$i * $per} {
+    margin-left: #{$i * $per}px !important;
+  }
+}

@@ -1,0 +1,23 @@
+<% provide(:title, "管理者管理") %>
+
+<%= link_to '管理者追加', new_admins_admin_path, class: 'btn btn-primary' %>
+
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>メールアドレス</th>
+    <th width="300">操作</th>
+  </tr>
+
+  <% @admins.each do |admin| %>
+    <tr>
+      <td><%= admin.id %></td>
+      <td><%= admin.email %></td>
+      <td>
+        <%= link_to '詳細', admins_admin_path(admin), class: 'btn btn-primary' %>
+        <%= link_to '編集', edit_admins_admin_path(admin), class: 'btn btn-primary' %>
+        <%= link_to '削除', admins_admin_path(admin), method: :delete, class: 'btn btn-danger', data: { confirm: '管理者を削除してもよろしいですか？' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>

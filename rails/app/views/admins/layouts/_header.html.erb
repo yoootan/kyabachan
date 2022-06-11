@@ -1,0 +1,25 @@
+<header class="p-header-loggedin">
+  <div class="p-header-loggedin__firstline">
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item align-self-center">
+          管理者
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"><%= admin_current_user.email %></a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <%= link_to 'パスワード変更', edit_admins_auth_password_changes_path, class: "dropdown-item" %>
+            <%= link_to 'ログアウト', admins_logout_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="p-header-loggedin__secondline">
+    <% if content_for?(:title) %>
+      <%= yield(:title) %>
+    <% else %>
+     ダッシュボード
+    <% end %>
+  </div>
+</header>

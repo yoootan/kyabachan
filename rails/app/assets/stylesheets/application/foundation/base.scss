@@ -1,0 +1,15 @@
+body {
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #FAFAFA;
+
+  &.bg-none {
+    background-color: transparent;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

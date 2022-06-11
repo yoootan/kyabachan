@@ -1,0 +1,17 @@
+<% provide(:title, "アプリケーション管理") %>
+
+<%= form_with model: @app_config, url: admins_app_config_path(@app_config), local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :value, 'value' %>
+    <%= f.text_area :value, class: 'form-control', size: '10x10' %>
+  </div>
+
+
+  <div class="actions">
+    <% if @app_config.new_record? %>
+      <%= f.submit '設定を登録する', class: 'btn btn-primary' %>
+    <% else %>
+      <%= f.submit '設定を編集する', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+<% end %>

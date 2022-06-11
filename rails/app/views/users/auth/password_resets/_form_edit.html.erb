@@ -1,0 +1,31 @@
+<%= form_with model: @user, url: users_auth_password_reset_path(@user.reset_password_token), local: true do |f| %>
+  <%= render 'layouts/errors', model: @user %>
+  <div class="p-signup">
+    <div class="p-signup__inner">
+      <h2 class="p-signup__title"></h2>
+
+      <div class="p-signup__form-group">
+        <%= f.label :password, 'パスワード' %>
+        <div class="input-group mb-3">
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="p-signup__form-group">
+        <%= f.label :password_confirmation, 'パスワード(確認)' %>
+        <div class="input-group mb-3">
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="c-user_auth_card__btn">
+        <%= f.submit 'パスワードをリセットする', class: 'c-btn c-btn--orange' %>
+      </div>
+
+      <div class="p-signup__footer">
+        <small>サービス名</small>
+      </div>
+      
+    </div>
+  </div>
+<% end %>

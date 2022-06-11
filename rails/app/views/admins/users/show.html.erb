@@ -1,0 +1,73 @@
+<% provide(:title, "ユーザー詳細") %>
+
+
+<style>
+    th {
+        width: 200px;
+    }
+</style>
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <td><%= @user.id %></td>
+  </tr>
+  <tr>
+    <th>メールアドレス</th>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th>作成日時</th>
+    <td><%= @user.created_at %></td>
+  </tr>
+  <tr>
+    <th>変更日時</th>
+    <td><%= @user.updated_at %></td>
+  </tr>
+</table>
+
+<h2>IQテスト回答一覧</h2>
+
+<div class="table overflow-auto">
+  <table class="text-nowrap">
+    <tr>
+      <th>ID</th>
+      <th>回答時間(秒)</th>
+      <th>スコア</th>
+      <th>OGP URL(幅1200)</th>
+      <th>OGP URL(幅630)</th>
+      <th>支払いステータス</th>
+      <th>小売価格</th>
+      <th>本体価格</th>
+      <th>割引額</th>
+      <th>販売価格</th>
+      <th>消費税</th>
+      <th>決済手数料</th>
+      <th>決済通貨</th>
+      <th>作成日時</th>
+      <th>変更日時</th>
+      <th>操作</th>
+    </tr>
+    <% @quiz_outcomes.each do |quiz| %>
+      <tr>
+        <td><%= quiz.id %></td>
+        <td><%= quiz.quiz_duration_seconds %></td>
+        <td><%= quiz.quiz_score %></td>
+        <td><%= link_to '閲覧', quiz.ogp_url_with_w1200, target: '_blank' %></td>
+        <td><%= link_to '閲覧', quiz.ogp_url_with_w630, target: '_blank' %></td>
+        <td><%= quiz.paypemt_status_i18n %></td>
+        <td><%= quiz.paypemt_retail.to_i %></td>
+        <td><%= quiz.paypemt_base.to_i %></td>
+        <td><%= quiz.paypemt_discount.to_i %></td>
+        <td><%= quiz.paypemt_amount.to_i %></td>
+        <td><%= quiz.paypemt_consumption_tax.to_i %></td>
+        <td><%= quiz.paypemt_transaction_charge.to_i %></td>
+        <td><%= quiz.payment_currency.upcase %></td>
+        <td><%= quiz.created_at %></td>
+        <td><%= quiz.updated_at %></td>
+        <td>
+          <%= link_to '割引', edit_admins_user_discount_path(@user, quiz), class: 'btn btn-primary' %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

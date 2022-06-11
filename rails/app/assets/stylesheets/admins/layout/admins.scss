@@ -1,0 +1,17 @@
+.l-admins {
+  display: flex;
+
+  .l-admins__sidenav {
+    width: 300px;
+    background-color: var(--admin-font-default-menu-background-color);
+    // padding: 1rem;
+    box-shadow: inset -1px 0 0 rgba(0,0,0,0.1);
+    min-height: 100vh;
+    position: fixed;
+  }
+
+  .l-admins__content {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
+}

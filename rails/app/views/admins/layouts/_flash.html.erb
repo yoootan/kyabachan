@@ -1,0 +1,15 @@
+<% if flash.present? %>
+  <div class="mt-0">
+    <% flash.each do |name, msg| %>
+      <% if name == 'notice' %>
+        <div class="alert alert-success" role="alert">
+          <%= msg.html_safe %>
+        </div>
+      <% elsif name == 'alert' %>
+        <div class="alert alert-danger" role="alert">
+          <%= msg.html_safe %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

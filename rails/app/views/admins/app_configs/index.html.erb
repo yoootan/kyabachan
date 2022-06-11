@@ -1,0 +1,25 @@
+<% provide(:title, "アプリケーション管理") %>
+
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>description</th>
+    <th>key</th>
+    <th>value</th>
+    <th>操作</th>
+  </tr>
+
+  <% @app_configs.each do |app_config| %>
+    <tr>
+      <td><%= app_config.id %></td>
+      <td><%= app_config.title.truncate(100) %></td>
+      <td><%= app_config.description.truncate(100) %></td>
+      <td><%= app_config.key.truncate(100) %></td>
+      <td><%= app_config.value.truncate(100) %></td>
+      <td>
+        <%= link_to '編集', edit_admins_app_config_path(app_config), class: 'btn btn-primary' %>
+      </td>
+    </tr>
+  <% end %>
+</table>

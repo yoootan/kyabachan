@@ -1,0 +1,11 @@
+
+:concurrency: 4
+:timeout: 25
+
+staging:
+  :concurrency: 4
+production:
+  :concurrency: 4
+:queues:
+  - kyabachan_mailers
+  - kyabachan_default
