@@ -2,6 +2,12 @@
 # Rails
 
 
+### Rails開発環境構築手順 
+https://www.notion.so/novelinc/Rails-4ba569b881034b579dacd45e961c566d
+
+### Gitブランチの管理方法
+https://www.notion.so/novelinc/Git-a9e18bd8cccb433bb003eaea9d2e62f4
+
 
 
 # NuxtJS

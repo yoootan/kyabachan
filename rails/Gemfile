@@ -73,8 +73,8 @@ gem 'rambulance'
 gem 'recaptcha'
 
 # pagenation
-# gem 'kaminari'
-# gem 'bootstrap4-kaminari-views'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 # other
 # gem 'cocoon'

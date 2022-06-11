@@ -24,8 +24,8 @@ end
 #
 # admins seeds
 #
-# https://script.google.com/macros/s/AKfycbzppa9oejnob4C7faNx1wdalUlHjveMzOj9PzmrsCj2TRDXx6KphHvYdwUl02slgbNfwQ/exec
-json_data = get_json('https://script.google.com/macros/s/AKfycbzppa9oejnob4C7faNx1wdalUlHjveMzOj9PzmrsCj2TRDXx6KphHvYdwUl02slgbNfwQ/exec')
+# https://script.google.com/macros/s/AKfycbxOjhrGCHypz-C90Kbl60mQyXYX5KSRX8pew8GWTg6chgzjNdxEkcyo722UVnQ5hXeGaQ/exec
+json_data = get_json('https://script.google.com/macros/s/AKfycbxOjhrGCHypz-C90Kbl60mQyXYX5KSRX8pew8GWTg6chgzjNdxEkcyo722UVnQ5hXeGaQ/exec')
 
 records = []
 json_data['tables']['app_configs'].each do |row|
